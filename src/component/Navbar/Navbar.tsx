@@ -25,16 +25,16 @@ export default function Navbar() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className=" bg-opacity-90 bg-neutral-800 text-white">
-      <div className="flex justify-between items-center pb-4 px-4">
+    <div className="bg-opacity-90 bg-neutral-800 text-white">
+      <div className="flex justify-between items-center  px-10">
         <img src="./src/assets/img/logo.png" alt="Logo" className="w-60 h-18" />
-        
+
         <div className="flex items-center w-1/2">
           <div className="flex items-center w-full bg-neutral-600 rounded-md px-2 py-1">
-            <input 
-              type="text" 
-              placeholder="Search..." 
-              className="text-lg border border-transparent py-2 px-2 text-white w-full placeholder:text-gray-400 focus:outline-none bg-transparent" 
+            <input
+              type="text"
+              placeholder="Search..."
+              className="text-lg border border-transparent py-2 px-2 text-white w-full placeholder:text-gray-400 focus:outline-none bg-transparent"
             />
             <button className="hover:bg-red-700 text-white px-4 py-2 rounded-md transition duration-300">
               <VscSearch className="w-6 h-8" />
@@ -42,9 +42,12 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="flex items-center">
-          <Link to="/login" className="select-none text-white px-4 py-2 rounded-md border border-red-600 hover:bg-red-600 transition duration-300">
+        <div className="flex items-center gap-4">
+          <Link to="/login" className="select-none text-white px-4 py-2  rounded-md border border-red-600 hover:bg-red-600 transition duration-300">
             Login
+          </Link>
+          <Link to="/cadastrar " className="select-none text-white px-4 py-2 rounded-md border border-red-600 hover:bg-red-600 transition duration-300">
+            Cadastrar
           </Link>
         </div>
       </div>
